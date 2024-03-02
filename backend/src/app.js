@@ -19,5 +19,9 @@ app.get('/',(req,res)=>{
     res.send("server is ready to use!!!")
 })
 
+//router import
+import userRouter from './routes/user.routes.js'
 
+// route declaration
+app.use('/api/v1/users',userRouter)  
 export default app

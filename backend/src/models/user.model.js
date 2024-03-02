@@ -13,6 +13,12 @@ const userSchema=new mongoose.Schema({
     required:true,
     unique:true,
    },
+   rollNumber:{
+    type:String,
+    required:true,
+    unique:true,
+    index:true
+   },
    mobileNumber:{
     type:String,
     required:true,
@@ -58,7 +64,7 @@ userSchema.methods.generateAccessToken=function(){
           {
               _id:this._id,
               email:this.email,
-              fullName:this.fullname,
+              rollNumber:this.rollNumber,
               mobileNumber:this.mobileNumber
           },
           process.env.ACCESS_TOKEN_SECRET,
