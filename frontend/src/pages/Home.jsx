@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import TodayMenu from '../pages/TodayMeal';
 function Home() {
   return (
     <div >
@@ -8,7 +7,6 @@ function Home() {
    <Link to="/menu">see menu</Link>
    <br></br>
    <Link to="/complaint">complaint</Link>
-   <TodayMenu/>
     </div>
   );
 };
