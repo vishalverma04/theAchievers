@@ -21,7 +21,15 @@ app.get('/',(req,res)=>{
 
 //router import
 import userRouter from './routes/user.routes.js'
-
+import adminRouter from './routes/admin.routes.js'
 // route declaration
 app.use('/api/v1/users',userRouter)  
+app.use('/api/v1/admin',adminRouter)
+
+app.use((err,req,res,next)=>{
+    const statusCode = err.statusCode || 500 ; 
+    const message = err.message || "Internal Server Error" ; 
+    return res.status(statusCode).json({success:false, statusCode, message})
+})
+ 
 export default app
