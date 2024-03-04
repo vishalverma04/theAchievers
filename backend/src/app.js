@@ -21,7 +21,10 @@ app.get('/',(req,res)=>{
 
 //router import
 import userRouter from './routes/user.routes.js'
+import userComplaint from './routes/profile.routes.js'
 
 // route declaration
 app.use('/api/v1/users',userRouter)  
+app.use('/api/v1/profile',userComplaint)
+
 export default app

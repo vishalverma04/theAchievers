@@ -58,7 +58,7 @@ const options={
 
 const loginUser=asyncHander(async (req,res)=>{
     
-    const {userdata,password}=req.body
+  const {userdata,password}=req.body
   const email=userdata
   const mobileNumber=userdata
   const rollNumber=userdata
@@ -76,7 +76,7 @@ const loginUser=asyncHander(async (req,res)=>{
   const isValidPassword=await user.isPasswordCorrect(password)
 
   if(!isValidPassword){
-    return new Apierror(401,"Password is incorrect")
+    throw new Apierror(401,"Password is incorrect")
   }
 
   const {accessTokens,refreshTokens}=await generateAccessandRefreshToken(user._id)
