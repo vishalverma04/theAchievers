@@ -1,0 +1,30 @@
+
+.container {
+    background: url('../../media/pexels-valeria-boltneva-1639562.jpg');
+    font-family: 'Dosis', sans-serif;
+}
+.btn {
+    transition: all 0.3s ease-in-out;
+    font-family: "Dosis", sans-serif;
+  }
+  
+  .btn {
+    width: 150px;
+    height: 60px;
+    border-radius: 50px;
+    background-image: linear-gradient(135deg, #adadad 0%, #272727 100%);
+    box-shadow: 0 20px 30px -6px rgba(78, 78, 78, 0.5);
+    outline: none;
+    cursor: pointer;
+    border: none;
+    color: white;
+  }
+  
+  .btn:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+  }
+  
+  .btn:active {
+    opacity: 0.5;
+  }
