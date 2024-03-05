@@ -1,0 +1,63 @@
+/* .contai{
+  z-index: -2;
+  margin-bottom: -100px;
+} */
+.complaint-container {
+    width: 100%;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .complaint-form {
+    width: 60%;
+    max-width: 426px;
+    background-color: #e6e6e6;
+    padding: 20px;
+    border-radius: 5px;
+    
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #2408f2 !important;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 40%;
+  }
+  
+  /* .btn-primary {
+    background-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  } */
+#complaint{
+  height: 250px;
+ resize: none;
+}

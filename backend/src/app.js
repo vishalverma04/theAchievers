@@ -21,6 +21,14 @@ app.get('/',(req,res)=>{
 
 //router import
 import userRouter from './routes/user.routes.js'
+<<<<<<< HEAD
+import userComplaint from './routes/profile.routes.js'
+
+// route declaration
+app.use('/api/v1/users',userRouter)  
+app.use('/api/v1/profile',userComplaint)
+
+=======
 import adminRouter from './routes/admin.routes.js'
 // route declaration
 app.use('/api/v1/users',userRouter)  
@@ -32,4 +40,5 @@ app.use((err,req,res,next)=>{
     return res.status(statusCode).json({success:false, statusCode, message})
 })
  
+>>>>>>> 8763718f67107dc28bf25ee592e20b829e075ab1
 export default app
