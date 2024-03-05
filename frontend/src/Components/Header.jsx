@@ -24,7 +24,7 @@ const Header = (props) => {
                     <img src="/images/rebateee.svg" alt="REBATE" />
                     <span>REBATE</span>
                 </a>
-                <a href="/mybills">
+                <a href="/accounts">
                     <img src="/images/bills.png" alt="MY BILLS" />
                     <span>MY BILLS</span>
                 </a>

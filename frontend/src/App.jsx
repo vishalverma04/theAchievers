@@ -1,10 +1,10 @@
-import './App.css'
-import { Routes,Route } from 'react-router-dom'
+import './App.css' 
 import Accounts from './pages/Accounts'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./Components/Login";
-import Header from "./Components/Header";
-import Home from "./Components/Home"
+import Login from "./components/Login.jsx"
+import Header from "./components/Header.jsx";
+import Home from "./components/Home.jsx"
+import Rebate from './components/Rebate.jsx';
 
 
 // import SignUp from './Components/SignUp'; // Import SignUp component
@@ -27,14 +27,13 @@ function App() {
       <Router>
       <Header/>
         <Routes>
-          
           <Route path="/Login" element={<Login />} />
           <Route path="/Home" element={<Home />} />
             <Route path="/" element={<Home/>}/>
-        <Route path="/menu" element={<WeeklyMenu menuItems={menuItems} />}/>
-        <Route path='/complaint' element={<ComplaintPage/>}/>
+        {/* <Route path="/menu" element={<WeeklyMenu menuItems={menuItems} />}/> */}
+        {/* <Route path='/complaint' element={<ComplaintPage/>}/> */}
         <Route path='/accounts' element={<Accounts/>}/>
-        
+        <Route path='/rebate' element={<Rebate/>}/>
         </Routes>
       </Router>
     </div>

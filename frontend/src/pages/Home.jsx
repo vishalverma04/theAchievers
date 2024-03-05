@@ -1,5 +1,4 @@
 import React from 'react'
-import Rebate from '../components/Rebate'
 import { Link } from 'react-router-dom';
 function Home() {
   return (
@@ -8,7 +7,6 @@ function Home() {
    <Link to="/menu">see menu</Link>
    <br></br>
    <Link to="/complaint">complaint</Link>
-   <Rebate/>
     </div>
   );
 };

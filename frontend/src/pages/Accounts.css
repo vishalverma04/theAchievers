@@ -1,3 +1,4 @@
+
 .container-account{
     background: url("../../media/pexels-tahir-osman-18053574.jpg");
 }
@@ -55,4 +56,48 @@
 
   .card2:hover:after{
     content : "₹5,324";
+  }
+
+
+  .center-div {
+    display : flex ; 
+    width : 100% ; 
+    gap : 10px ; 
+    padding : 10px ; 
+  }
+
+  .left-div, .right-div {
+    width : 100% ; 
+    padding : 80px ; 
+  }
+
+  .select-text {
+    text-align: left;
+  }
+  select{
+    text-align : left ; 
+  } 
+  .heading {
+    font-size: 40px;
+    padding-top : 50px ; 
+  }
+  .middle-div {
+    display : flex ; 
+    flex-direction : row ; 
+    padding : 10px ; 
+    gap : 10px;   
+  }
+
+  .middle-child {
+    background-color: white ;
+    color : black ;
+    border-radius : 10px ;  
+    width : 100% ; 
+    padding : 20px ; 
+  }
+
+  .select-input {
+    padding : 10px ; 
+    border-radius : 5px;
+    width : 10% ; 
   }
