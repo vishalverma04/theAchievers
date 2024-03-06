@@ -1,4 +1,12 @@
 #root {
+  margin: 0;
   text-align: center;
+  font-family : 'Robot slab', serif ; 
 }
 
+.overlay {
+  position : absolute ; 
+  height : 100% ; 
+  width : 100% ; 
+  background : rgb(47,106,127)
+}
