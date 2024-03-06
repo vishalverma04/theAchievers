@@ -1,8 +1,11 @@
-import './App.css'
-import { Routes,Route } from 'react-router-dom'
-import Home from './pages/Home'
-import WeeklyMenu from './pages/MessMenu/MessMenu';
-import ComplaintPage from './pages/Complaint/Complaint'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./Components/Login";
+import Header from "./Components/Header";
+import Home from "./Components/Home"
+
+
+// import SignUp from './Components/SignUp'; // Import SignUp component
+
 
 function App() {
   const menuItems = [
@@ -16,14 +19,21 @@ function App() {
     // Add more items for the rest of the week...
   ];
   return (
-    <>
-    <Routes>
-        <Route path="/" element={<Home/>}/>
+    <div className="App">
+      <Router>
+      <Header/>
+        <Routes>
+          
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Home" element={<Home />} />
+            <Route path="/" element={<Home/>}/>
         <Route path="/menu" element={<WeeklyMenu menuItems={menuItems} />}/>
         <Route path='/complaint' element={<ComplaintPage/>}/>
-    </Routes>
-    </>
-  )
+        </Routes>
+      </Router>
+    </div>
+  );
+
 }
 
-export default App
+export default App;
