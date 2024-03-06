@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./Components/Login";
-import Header from "./Components/Header";
-import Home from "./Components/Home"
+import Login from "./components/Login";
+import Header from "./components/Header";
+import Home from "./components/Home"
+
 
 
 // import SignUp from './Components/SignUp'; // Import SignUp component
@@ -27,8 +28,8 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/Home" element={<Home />} />
             <Route path="/" element={<Home/>}/>
-        <Route path="/menu" element={<WeeklyMenu menuItems={menuItems} />}/>
-        <Route path='/complaint' element={<ComplaintPage/>}/>
+        {/* <Route path="/menu" element={<WeeklyMenu menuItems={menuItems} />}/>
+        <Route path='/complaint' element={<ComplaintPage/>}/> */}
         </Routes>
       </Router>
     </div>
