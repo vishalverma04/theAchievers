@@ -1,7 +1,8 @@
 // import styled from "styled-components";
 import styled from "styled-components";
-import Services from "./Services"
 
+import Rebate from "./Rebate.jsx"
+import Services from "./Services"
 import ImgSlider from "./ImgSlider";
 const Home=(props)=>{
 return(

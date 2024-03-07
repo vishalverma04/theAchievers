@@ -24,7 +24,7 @@ const Services = () => {
             title: 'Bills',
             description: "Check for any pending bills!",
             imageUrl: '/images/service-bill.jpg',
-            link: '/myBills',
+            link: '/accounts',
         },
         {
             id: 4,
@@ -38,7 +38,7 @@ const Services = () => {
             title: 'Complaints',
             description: "Complain regarding carpentry, cleanliness, or anything related to hostel or the mess",
             imageUrl: '/images/complaints.jpg',
-            link: '/complaints',
+            link: '/complaint',
         },
         {
             id: 6,

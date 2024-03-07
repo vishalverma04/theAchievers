@@ -1,11 +1,14 @@
+import './App.css' 
+import Accounts from './pages/Accounts'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./components/Login";
-import Header from "./components/Header";
-import Home from "./components/Home"
-
-
-
+import Login from "./components/Login.jsx"
+import Header from "./components/Header.jsx";
+import Home from "./components/Home.jsx"
+import Rebate from './components/Rebate.jsx';
+import ComplaintPage from './pages/Complaint/Complaint.jsx';
+import WeeklyMenu from './pages/MessMenu/MessMenu.jsx';
 // import SignUp from './Components/SignUp'; // Import SignUp component
+
 
 
 function App() {
@@ -24,12 +27,13 @@ function App() {
       <Router>
       <Header/>
         <Routes>
-          
           <Route path="/Login" element={<Login />} />
           <Route path="/Home" element={<Home />} />
             <Route path="/" element={<Home/>}/>
-        {/* <Route path="/menu" element={<WeeklyMenu menuItems={menuItems} />}/>
-        <Route path='/complaint' element={<ComplaintPage/>}/> */}
+        <Route path="/mess-menu" element={<WeeklyMenu menuItems={menuItems} />}/> 
+         <Route path='/complaint' element={<ComplaintPage/>}/>
+        <Route path='/accounts' element={<Accounts/>}/>
+        <Route path='/rebate' element={<Rebate/>}/>
         </Routes>
       </Router>
     </div>
