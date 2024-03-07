@@ -1,0 +1,87 @@
+/* Signup.css */
+
+.signup-container {
+  width: 100%;
+  height: 100vh;
+  margin: 50px auto;
+  padding: 20px;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.signup-container:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  border-color: #207dbb;
+}
+
+.signup-container h2 {
+  text-align: center;
+  color: #333;
+  margin-top: 10px;
+}
+
+.signup-container .form-label {
+  font-weight: bold;
+  color: #555;
+}
+
+.signup-container .form-control {
+  width: 100%; /* Change width to 100% */
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.signup-container .form-control:focus {
+  border-color: #3498db;
+}
+
+.signup-container .button {
+  width: 100%;
+  background-color: #3498db;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container .button:hover {
+  background-color: #207dbb;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.signup-container .error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* Add this style to center the submit button */
+.signup-container .button {
+  
+    width: 100%;
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Center the button horizontally */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
