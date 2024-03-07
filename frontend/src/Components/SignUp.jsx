@@ -3,7 +3,7 @@ import "./Signup.css";
 
 function Signup() {
   const initialValues = {
-    username: "",
+    fullName: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -37,8 +37,8 @@ function Signup() {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
-    if (!values.username) {
-      errors.username = "Username is required!";
+    if (!values.fullName) {
+      errors.fullName = "Full Name is required!";
     }
 
     if (!values.email) {
@@ -75,20 +75,20 @@ function Signup() {
   return (
     <div className="container">
       <form onSubmit={handleSubmit}>
-        <h1> SIGNUP</h1>
-        <div className="ui divider"></div>
+        <h1 className="heading-signup"> SIGNUP</h1>
+        {/* <div className="ui divider"></div> */}
         <div className="ui form">
           <div className="field">
             {/* <label>Username</label> */}
             <input
               type="text"
-              name="username"
-              placeholder="Username"
-              value={formValues.username}
+              name="fullName"
+              placeholder="Full Name"
+              value={formValues.fullName}
               onChange={handleChange}
             />
           </div>
-          <p>{formErrors.username}</p>
+          <p>{formErrors.fullName}</p>
 
           <div className="field">
             {/* <label>Email</label> */}
@@ -101,30 +101,6 @@ function Signup() {
             />
           </div>
           <p>{formErrors.email}</p>
-
-          <div className="field">
-            {/* <label>Password</label> */}
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={formValues.password}
-              onChange={handleChange}
-            />
-          </div>
-          <p>{formErrors.password}</p>
-
-          <div className="field">
-            {/* <label>Confirm Password</label> */}
-            <input
-              type="password"
-              name="confirmPassword"
-              placeholder="Confirm Password"
-              value={formValues.confirmPassword}
-              onChange={handleChange}
-            />
-          </div>
-          <p>{formErrors.confirmPassword}</p>
 
           <div className="field">
             {/* <label>Mobile Number</label> */}
@@ -150,7 +126,31 @@ function Signup() {
           </div>
           <p>{formErrors.hostelNumber}</p>
 
-          <button className="fluid ui button blue ">Submit</button>
+          <div className="field">
+            {/* <label>Password</label> */}
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={formValues.password}
+              onChange={handleChange}
+            />
+          </div>
+          <p>{formErrors.password}</p>
+
+          <div className="field">
+            {/* <label>Confirm Password</label> */}
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              value={formValues.confirmPassword}
+              onChange={handleChange}
+            />
+          </div>
+          <p>{formErrors.confirmPassword}</p>
+
+          <button className="fluid ui button-signup blue ">Submit</button>
         </div>
       </form>
     </div>
