@@ -12,6 +12,6 @@ router.route('/complaint').post(
 router.route('/rebate').post(verifyJWT,rebate)
 //http:localhost:4000/api/v1/profile/rebate 
 
-router.route('/rebate').post(verifyJWT,feedback)
+router.route('/feedback').post(verifyJWT,feedback)
 
 export default router
