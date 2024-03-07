@@ -2,11 +2,13 @@ import styled from "styled-components";
 import Rebate from "./Rebate.jsx"
 import Services from "./Services"
 import ImgSlider from "./ImgSlider";
+import Logout from "./Logout.jsx";
 const Home=(props)=>{
 return(
     <Container>
         <ImgSlider/>
         <Services/>
+        <Logout/>
     </Container>
 )
 }

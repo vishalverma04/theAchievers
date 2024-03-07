@@ -2,23 +2,42 @@
 import React, { useState, useEffect } from "react";
 import "./Login.css";
 import { NavLink } from "react-router-dom"; // Import NavLink for navigation
-
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 function Login() {
   const initialValues = { username: "", email: "", password: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-
+ const navigate=useNavigate()
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit =async (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
+    console.log(formValues)
+    try {
+      const config = {
+        headers: {
+          "Content-type": "application/json",
+        },
+      };
+      const { data } = await axios.post(
+        "/api/v1/users/login",
+        {userdata:formValues.email,password:formValues.password},
+        config
+      );
+      console.log(data);
+      navigate('/home')
     setIsSubmit(true);
-  };
+  }
+  catch(error){
+   console.log(error)
+  }
+}
 
   useEffect(() => {
     console.log(formErrors);
