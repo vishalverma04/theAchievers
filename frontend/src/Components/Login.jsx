@@ -49,13 +49,13 @@ function Login() {
   };
 
   return (
-    <div className="container">
+    <div className="login-container">
       <form onSubmit={handleSubmit}>
-        <h1>Login Form</h1>
+        <h1 className="h1">Login Form</h1>
         <div className="ui divider"></div>
         <div className="ui form">
           <div className="field">
-            <label>Username</label>
+            {/* <label>Username</label> */}
             <input
               type="text"
               name="username"
@@ -66,7 +66,7 @@ function Login() {
           </div>
           <p>{formErrors.username}</p>
           <div className="field">
-            <label>Email</label>
+            {/* <label>Email</label> */}
             <input
               type="text"
               name="email"
@@ -77,7 +77,7 @@ function Login() {
           </div>
           <p>{formErrors.email}</p>
           <div className="field">
-            <label>Password</label>
+            {/* <label>Password</label> */}
             <input
               type="password"
               name="password"
@@ -86,16 +86,16 @@ function Login() {
               onChange={handleChange}
             />
           </div>
-          <p>{formErrors.password}</p>
-          <button className="fluid ui button blue">Submit</button>
+          <p >{formErrors.password}</p>
+          <button className="login-button">Submit</button>
         </div>
       </form>
 
       {/* Additional Links */}
       <div className="additional-links">
-        <NavLink to="/signup">Create Account</NavLink>
-        <span>|</span>
-        <NavLink to="/forgot-password">Forgot Password</NavLink>
+        <NavLink className="p" to="/signup">Create Account</NavLink>
+        <span id="span">|</span>
+        <NavLink className="p" to="/forgot-password">Forgot Password</NavLink>
       </div>
     </div>
   );

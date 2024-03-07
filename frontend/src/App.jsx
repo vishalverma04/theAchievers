@@ -10,6 +10,7 @@ import WeeklyMenu from './pages/MessMenu/MessMenu.jsx';
 
 import SignUp from './components/SignUp'; // Import SignUp component
 import Feedback from './components/Feedback'; // Import SignUp component
+import ExtraItems from './components/Extras.jsx'; // Import SignUp component
 
 
 
@@ -33,11 +34,12 @@ function App() {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/feedback" element={<Feedback />} />
           <Route path="/Home" element={<Home />} />
-            <Route path="/" element={<Home/>}/>
+          <Route path="/accounts" element={<Accounts/>}/> 
         <Route path="/mess-menu" element={<WeeklyMenu menuItems={menuItems} />}/> 
          <Route path='/complaint' element={<ComplaintPage/>}/>
+        <Route path='/extras' element={<ExtraItems/>}/>
 
-        <Route path='/accounts' element={<Accounts/>}/>
+
         <Route path='/rebate' element={<Rebate/>}/>
         </Routes>
       </Router>
