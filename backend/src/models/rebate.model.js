@@ -1,7 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 
 const rebateSchema = new mongoose.Schema({
-    complainter:{
+    user:{
         type:Schema.Types.ObjectId,
         ref:"User"
     },  
