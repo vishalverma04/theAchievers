@@ -2,7 +2,7 @@
 .container-account{
     background: url("../../media/pexels-tahir-osman-18053574.jpg");
 }
-.card {
+.card-account {
     position: relative;
     color : white ; 
     background: black;
@@ -15,8 +15,8 @@
     cursor: pointer;
   }
   
-  .card::before,
-  .card::after {
+  .card-account::before,
+  .card-account::after {
     position: absolute;
     content: "";
     width: 20%;
@@ -30,65 +30,67 @@
     transition: all 0.5s;
   }
   
-  .card::before {
+  .card-account::before {
     top: 0;
     right: 0;
     border-radius: 0 15px 0 100%;
   }
   
-  .card::after {
+  .card-account::after {
     bottom: 0;
     left: 0;
     border-radius: 0 100%  0 15px;
   }
   
-  .card:hover::before,
-  .card:hover:after {
+  .card-account:hover::before,
+  .card-account:hover:after {
     width: 100%;
     height: 100%;
     border-radius: 15px;
     transition: all 0.5s;
   }
   
-  .card:hover:after {
+  .card-account:hover:after {
     content: "₹12,000";
   }
 
-  .card2:hover:after{
+  .card2-account:hover:after{
     content : "₹5,324";
   }
 
 
-  .center-div {
+  .center-div-account {
     display : flex ; 
     width : 100% ; 
     gap : 10px ; 
     padding : 10px ; 
   }
 
-  .left-div, .right-div {
+  .left-div-account, .right-div-account {
     width : 100% ; 
     padding : 80px ; 
   }
 
-  .select-text {
+  .select-text-account {
     text-align: left;
   }
-  select{
-    text-align : left ; 
-  } 
-  .heading {
+
+  .select-input-account {
+    text-align: left ; 
+  }
+
+  .heading-account {
     font-size: 40px;
     padding-top : 50px ; 
   }
-  .middle-div {
+  .middle-div-account {
     display : flex ; 
     flex-direction : row ; 
     padding : 10px ; 
     gap : 10px;   
   }
 
-  .middle-child {
+  .middle-child-account {
     background-color: white ;
     color : black ;
     border-radius : 10px ;  
@@ -96,7 +98,7 @@
     padding : 20px ; 
   }
 
-  .select-input {
+  .select-input-account {
     padding : 10px ; 
     border-radius : 5px;
     width : 10% ; 

@@ -7,6 +7,7 @@ import Home from "./components/Home.jsx"
 import Rebate from './components/Rebate.jsx';
 import ComplaintPage from './pages/Complaint/Complaint.jsx';
 import WeeklyMenu from './pages/MessMenu/MessMenu.jsx';
+
 // import SignUp from './Components/SignUp'; // Import SignUp component
 
 
@@ -32,6 +33,7 @@ function App() {
             <Route path="/" element={<Home/>}/>
         <Route path="/mess-menu" element={<WeeklyMenu menuItems={menuItems} />}/> 
          <Route path='/complaint' element={<ComplaintPage/>}/>
+
         <Route path='/accounts' element={<Accounts/>}/>
         <Route path='/rebate' element={<Rebate/>}/>
         </Routes>
