@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 const ComplaintPage = () => {
   const [category, setCategory] = useState('');
   const [complaint, setComplaint] = useState('');
+  const [media, setMedia] = useState('');
   
 
   const handleCategoryChange = (e) => {
@@ -20,7 +21,7 @@ const ComplaintPage = () => {
     console.log('Category:', category);
     console.log('Complaint:', complaint);
   };
-  
+  console.log(media)
   return (
     <>
     <div className="container-complaint">
@@ -39,6 +40,9 @@ const ComplaintPage = () => {
          <div className='form-group-2'>
              <p>write complaint here:</p>
              <textarea placeholder='write complaint here' className='complaint-area' onChange={handleComplaintChange}></textarea>
+         </div>
+         <div>
+          <input name="media" onChange={(e)=>setMedia(e.target.value)} className='input-file' type='file'></input>
          </div>
          <button className='btn-complaint'>Submit</button>
       </form>

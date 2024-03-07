@@ -45,3 +45,11 @@
   transform: translateY(-10px);
   box-shadow: none;
 }
+.input-file{
+  padding: .1rem;
+  border-radius: 2px;
+  width: 14rem;
+  background-image: linear-gradient(135deg, #adadad 0%, #272727 100%);
+  margin: .5rem 0 0 0;
+  font-family: 'Dosis', sans-serif;
+}
