@@ -1,8 +1,10 @@
 import { Apierror } from "../utils/apierror.js";
 import { asyncHander } from "../utils/asyncHandler.js";
 import {User} from "../models/user.model.js"
-import {complaint} from "../models/complaint.model.js"
+import {Complaint} from "../models/complaint.model.js"
 import { ApiResponse } from "../utils/apiResponse.js";
+import errorHandler from "../utils/error.js";
+import { Rebate} from "../models/rebate.model.js"; 
 
 const complaint =asyncHander(async function(req,res){
   const {category,problem}=req.body
@@ -11,9 +13,9 @@ const complaint =asyncHander(async function(req,res){
 
   if(!category || !problem){
     throw new Apierror(401,"all fields are required")
-  } 
+  }  
   const complainter=await User.findById(req.user?._id)
-  const createdComplaint=await complaint.create({
+  const createdComplaint=await Complaint.create({
     category,problem,complainter
   })
   if(!createdComplaint){
@@ -24,4 +26,24 @@ const complaint =asyncHander(async function(req,res){
 )
 })
 
-export {complaint}
+const rebate = async (req,res,next) =>{
+  const {reason, dateFrom, dateTo} = req.body ; 
+  
+  if (!reason || !dateFrom || !dateTo){
+    return next(errorHandler(401,"All fields are required!"))
+  }
+
+  try {
+    const user = await User.findById(req.user?._id)
+    const rebateFilled = await Rebate.create({user, reason, dateFrom, dateTo})
+    
+    if (!rebateFilled) return next(errorHandler(500,"Something went wrong!"))
+
+    return res.status(201).json(rebateFilled)
+  }
+  catch(error){
+    return next(error)
+  }
+}
+
+export {complaint, rebate}

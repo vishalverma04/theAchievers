@@ -5,8 +5,8 @@ import Login from "./components/Login.jsx"
 import Header from "./components/Header.jsx";
 import Home from "./components/Home.jsx"
 import Rebate from './components/Rebate.jsx';
-
-
+import WeeklyMenu from './pages/MessMenu/MessMenu.jsx';
+import ComplaintPage from './pages/Complaint/Complaint.jsx' ; 
 // import SignUp from './Components/SignUp'; // Import SignUp component
 
 
@@ -30,8 +30,8 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/Home" element={<Home />} />
             <Route path="/" element={<Home/>}/>
-        {/* <Route path="/menu" element={<WeeklyMenu menuItems={menuItems} />}/> */}
-        {/* <Route path='/complaint' element={<ComplaintPage/>}/> */}
+        <Route path="/menu" element={<WeeklyMenu menuItems={menuItems} />}/>
+        <Route path='/complaint' element={<ComplaintPage/>}/>
         <Route path='/accounts' element={<Accounts/>}/>
         <Route path='/rebate' element={<Rebate/>}/>
         </Routes>
