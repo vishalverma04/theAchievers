@@ -110,7 +110,7 @@ function Feedback() {
 
   const handleSubmit = () => {
     setShowPopup(true);
-  };
+      };
 
   const getGreeting = () => {
     if (rating > 3) {
