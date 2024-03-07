@@ -8,7 +8,8 @@ import Rebate from './components/Rebate.jsx';
 import ComplaintPage from './pages/Complaint/Complaint.jsx';
 import WeeklyMenu from './pages/MessMenu/MessMenu.jsx';
 
-// import SignUp from './Components/SignUp'; // Import SignUp component
+import SignUp from './components/SignUp'; // Import SignUp component
+import Feedback from './components/Feedback'; // Import SignUp component
 
 
 
@@ -29,6 +30,8 @@ function App() {
       <Header/>
         <Routes>
           <Route path="/Login" element={<Login />} />
+          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/feedback" element={<Feedback />} />
           <Route path="/Home" element={<Home />} />
             <Route path="/" element={<Home/>}/>
         <Route path="/mess-menu" element={<WeeklyMenu menuItems={menuItems} />}/> 
