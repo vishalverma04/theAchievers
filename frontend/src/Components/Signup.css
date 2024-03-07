@@ -1,5 +1,52 @@
 /* Signup.css */
+.heading-signup {
+  color :white ; 
+  margin-top : 80px ; 
+}
 
+.field-signup {
+  width : 100% ; 
+}
+.field-signup select{
+  width : 100% ; 
+  padding : 1rem ; 
+  border-radius: 0.3rem;
+  color : grey ; 
+}
+
+.field-signup input {
+  outline: none;
+  border: none ;
+}
+.field-signup select option {
+  text-align: center;
+  color : grey ; 
+}
+.left-right-signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: top ; 
+}
+.field-signup {
+  gap : 10px ; 
+}
+.field-signup input {
+  padding : 1rem ; 
+}
+
+.form-signup {
+  width : 40% ;
+  display : flex; 
+  flex-direction: column;
+  gap : 10px ; 
+  margin : auto ;  
+
+}
+
+.button-signup {
+  width : 100% ;
+  padding : 1rem ;  
+}
 .signup-container {
   width: 100%;
   height: 100vh;
@@ -84,4 +131,13 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
+  }
+
+
+  @media screen and (min-width : 768px) {
+    .left-right-signup-container {
+      display: flex;
+      flex-direction: row;
+      gap : 10px ;  
+    }
   }
