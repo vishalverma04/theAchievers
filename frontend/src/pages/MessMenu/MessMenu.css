@@ -1,6 +1,24 @@
-
-.mess{
-    margin-left: 10%;
-    width: 80% !important;
-    
+.mess-container{
+    margin : 4rem 0 ; 
+    padding-top: 2.5rem ;
+    padding-bottom : 2.5rem ; 
+    display : flex ; 
+    flex-direction: column;
+    gap : 1.25rem ; 
+    position : relative ; 
+    width: 100%;
+    border-radius: 0.125rem ;
+    background: url('../../media/pexels-valeria-boltneva-1639562.jpg');
+    font-family: 'Dosis', sans-serif;
+}
+.mess-columns{
+    margin: 20px 0;
+}
+.first-row{
+  display: flex;
+  justify-content: space-around;
+}
+.mess-row{
+    display: flex;
+    justify-content: space-around; 
 }
