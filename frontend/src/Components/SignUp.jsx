@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "./Signup.css";
+import { Link } from "react-router-dom";
 
 function Signup() {
+  const hostels = ["H-1", "H-2", "H-3", "H-4", "H-5", "H-6", "H-7", "H-8", "H-9", "H-10", "H-11", "GH-KC", "GH-CB", "GH-BB"];
+
+
   const initialValues = {
     fullName: "",
     email: "",
     password: "",
     confirmPassword: "",
+    rollNumber: "",
+    roomNumber: "",
     mobileNumber: "",
     hostelNumber: "",
   };
@@ -39,6 +45,18 @@ function Signup() {
 
     if (!values.fullName) {
       errors.fullName = "Full Name is required!";
+    }
+
+    if (!values.roomNumber) {
+      errors.roomNumber = "Room Number is required!";
+    }
+
+    if (!values.hostelNumber) {
+      errors.hostelNumber = "Hostel Number is required!";
+    }
+
+    if (!values.rollNumber) {
+      errors.rollNumber = "Roll Number is required!";
     }
 
     if (!values.email) {
@@ -76,81 +94,99 @@ function Signup() {
     <div className="container">
       <form onSubmit={handleSubmit}>
         <h1 className="heading-signup"> SIGNUP</h1>
-        {/* <div className="ui divider"></div> */}
-        <div className="ui form">
-          <div className="field">
-            {/* <label>Username</label> */}
-            <input
-              type="text"
-              name="fullName"
-              placeholder="Full Name"
-              value={formValues.fullName}
-              onChange={handleChange}
-            />
-          </div>
-          <p>{formErrors.fullName}</p>
+        <div className="left-right-signup-container">
+          <div className="ui form-signup">
+            <div className="field-signup">
+              <input
+                type="text"
+                name="fullName"
+                placeholder="Full Name"
+                value={formValues.fullName}
+                onChange={handleChange}
+              />
+              <p>{formErrors.fullName}</p>
+            </div>
 
-          <div className="field">
-            {/* <label>Email</label> */}
-            <input
-              type="text"
-              name="email"
-              placeholder="Email"
-              value={formValues.email}
-              onChange={handleChange}
-            />
+            <div className="field-signup">
+              <input
+                type="text"
+                name="rollNumber"
+                placeholder="Roll Number"
+                value={formValues.rollNumber}
+                onChange={handleChange}
+              />
+              <p>{formErrors.rollNumber}</p>
+            </div>
+            <div className="field-signup">
+              <select name="hostelNumber"value={formValues.hostelNumber}
+                onChange={handleChange}>
+                <option value="" disabled>Select Hostel Number</option>
+                {hostels.map((hostel, index) => (
+                  <option key={index} value={hostel}>{hostel}</option>
+                ))}
+              </select>
+              <p>{formErrors.hostelNumber}</p>
+            </div>
+            <div className="field-signup">
+              <input
+                type="text"
+                name="roomNumber"
+                placeholder="Room Number"
+                value={formValues.roomNumber}
+                onChange={handleChange}
+              />
+              <p>{formErrors.roomNumber}</p>
+            </div>
+          
+            <div className="field-signup">
+              {/* <label>Mobile Number</label> */}
+              <input
+                type="text"
+                name="mobileNumber"
+                placeholder="Mobile Number"
+                value={formValues.mobileNumber}
+                onChange={handleChange}
+              />
+              <p>{formErrors.mobileNumber}</p>
+            </div>
+            
           </div>
-          <p>{formErrors.email}</p>
-
-          <div className="field">
-            {/* <label>Mobile Number</label> */}
-            <input
-              type="text"
-              name="mobileNumber"
-              placeholder="Mobile Number"
-              value={formValues.mobileNumber}
-              onChange={handleChange}
-            />
+          <div className="ui form-signup">
+            <div className="field-signup">
+              {/* <label>Email</label> */}
+              <input
+                type="text"
+                name="email"
+                placeholder="Email"
+                value={formValues.email}
+                onChange={handleChange}
+              />
+              <p>{formErrors.email}</p>
+            </div>
+            <div className="field-signup">
+              {/* <label>Password</label> */}
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={formValues.password}
+                onChange={handleChange}
+              />
+              <p>{formErrors.password}</p>
+            </div>
+            <div className="field-signup">
+              {/* <label>Confirm Password</label> */}
+              <input
+                type="password"
+                name="confirmPassword"
+                placeholder="Confirm Password"
+                value={formValues.confirmPassword}
+                onChange={handleChange}
+              />
+              <p>{formErrors.confirmPassword}</p>
+            </div>
+            <button className="fluid ui button-signup blue "><Link to="/login">LOG IN</Link></button>
           </div>
-          <p>{formErrors.mobileNumber}</p>
-
-          <div className="field">
-            {/* <label>Hostel Number</label> */}
-            <input
-              type="text"
-              name="hostelNumber"
-              placeholder="Hostel Number"
-              value={formValues.hostelNumber}
-              onChange={handleChange}
-            />
-          </div>
-          <p>{formErrors.hostelNumber}</p>
-
-          <div className="field">
-            {/* <label>Password</label> */}
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={formValues.password}
-              onChange={handleChange}
-            />
-          </div>
-          <p>{formErrors.password}</p>
-
-          <div className="field">
-            {/* <label>Confirm Password</label> */}
-            <input
-              type="password"
-              name="confirmPassword"
-              placeholder="Confirm Password"
-              value={formValues.confirmPassword}
-              onChange={handleChange}
-            />
-          </div>
-          <p>{formErrors.confirmPassword}</p>
-
-          <button className="fluid ui button-signup blue ">Submit</button>
         </div>
       </form>
     </div>
