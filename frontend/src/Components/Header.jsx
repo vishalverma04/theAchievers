@@ -1,38 +1,37 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 const Header = (props) => {
-    return (
-        <Nav>
-            <Logo>
-                <img src="https://th.bing.com/th?id=OIP.EAq7n0NsBw4MpfHofHraXAHaF7&w=279&h=223&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="MessMate" />
-            </Logo>
-            <NavMenu>
-                <a href="/Home">
-                    <img src="/images/home-icon.svg" alt="HOME" />
-                    <span>HOME</span>
-                </a>
-                <a href="/search">
-                    <img src="/images/search-icon.svg" alt="SEARCH" />
-                    <span>SEARCH</span>
-                </a>
-                <a href="/extras">
-                    <img src="/images/extraaa.svg" alt="EXTRAS" />
-                    <span>EXTRAS</span>
-                </a>
-                <a href="/rebate">
-                    <img src="/images/rebateee.svg" alt="REBATE" />
-                    <span>REBATE</span>
-                </a>
-                <a href="/accounts">
-                    <img src="/images/bills.png" alt="MY BILLS" />
-                    <span>MY BILLS</span>
-                </a>
-                
-            </NavMenu>
-            <Login>LOGIN</Login>
-        </Nav>
-    )
+  return (
+    <Nav>
+      <Logo>
+        <img src="https://th.bing.com/th?id=OIP.EAq7n0NsBw4MpfHofHraXAHaF7&w=279&h=223&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="MessMate" />
+      </Logo>
+      <NavMenu>
+        <Link to="/home">
+          <img src="/images/home-icon.svg" alt="HOME" />
+          <span>HOME</span>
+        </Link>
+        <Link to='/search'>
+          <img src="/images/search-icon.svg" alt="SEARCH" />
+          <span>SEARCH</span>
+        </Link>
+        <Link to='/extras'>
+          <img src="/images/extraaa.svg" alt="EXTRAS" />
+          <span>EXTRAS</span>
+        </Link>
+        <Link to='/rebate'>
+          <img src="/images/rebateee.svg" alt="REBATE" />
+          <span>REBATE</span>
+        </Link>
+        <Link to="/accounts">
+          <img src="/images/bills.png" alt="MY BILLS" />
+          <span>MY BILLS</span>
+        </Link>
+      </NavMenu>
+      <Link to="/Login">LOGIN</Link>
+    </Nav>
+  )
 };
 
 const Nav = styled.nav`
