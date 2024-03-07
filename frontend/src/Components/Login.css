@@ -1,0 +1,70 @@
+css
+Copy code
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center the content */
+}
+
+.ui.message.success {
+  color: green;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.ui.divider {
+  margin: 20px 0;
+}
+
+.ui.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  margin-bottom: 20px;
+  width: 50%;
+margin-left: 400px;
+  
+  justify-content: center;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input {
+ 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%; /* Set the width to 100% or adjust as needed */
+ 
+  text-align: center;
+}
+
+p {
+  color: red;
+  margin: 0;
+}
+
+button {
+  background-color: #2185d0;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1678c2;
+}
