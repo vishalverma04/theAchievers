@@ -19,7 +19,7 @@ const generateAccessandRefreshToken=async(userId)=>{
 
 const registerUSer=asyncHander(async (req,res)=>{
    const {fullName,rollNumber,email,mobileNumber,hostelNumber,roomNumber,password} =req.body
-    
+   
    const existedUser=await User.findOne({
     $or:[
         {mobileNumber},{email},{rollNumber}

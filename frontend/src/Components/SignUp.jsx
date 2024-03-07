@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Signup.css";
 import { Link } from "react-router-dom";
+import axios from "axios"
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
   const hostels = ["H-1", "H-2", "H-3", "H-4", "H-5", "H-6", "H-7", "H-8", "H-9", "H-10", "H-11", "GH-KC", "GH-CB", "GH-BB"];
@@ -19,18 +21,44 @@ function Signup() {
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-
+  const navigate=useNavigate()
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit =async (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
-    setIsSubmit(true);
-  };
-
+    console.log(formValues)
+    try {
+      const config = {
+        headers: {
+          "Content-type": "application/json",
+        },
+      };
+      const { data } = await axios.post(
+        "/api/v1/users/register",
+        {
+          fullName:formValues.fullName,
+          email:formValues.email,
+          rollNumber:formValues.rollNumber,
+          hostelNumber:formValues.hostelNumber,
+          mobileNumber:formValues.mobileNumber,
+          roomNumber:formValues.roomNumber,
+          password:formValues.password
+        },
+        config
+      );
+      console.log(data);
+      localStorage.setItem("userInfo", JSON.stringify(data));
+      
+      navigate('/login');
+      setIsSubmit(true)
+  }catch(error){
+  console.log(error)
+  }
+}
   useEffect(() => {
     console.log(formErrors);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
